@@ -7,9 +7,9 @@
   <a href="LICENSE">Open source · MIT</a>
 </p>
 
-**K5 Bearing** is a simple, text-based site on four pillars: the **body**, **movement**,
-the **iron** (the gym), and **Karaite prayer**. Effort and reverence run through the same
-flesh. The whole aim is simple — keep your bearing.
+**K5 Bearing** is a simple, text-based site on three pillars: the **body**, **movement**,
+and **Karaite prayer**. Effort and reverence run through the same flesh. The whole aim is
+simple — keep your bearing.
 
 ## Run it
 
@@ -23,8 +23,8 @@ python3 -m http.server 8000     # then open http://localhost:8000
 ## Repository
 
 ```
-index.html     the site (four sections + the writing)
-styles.css     the reading design (EB Garamond, parchment on near-black)
+index.html     the site (three sections + the writing)
+styles.css     the reading design (EB Garamond, black on white)
 assets/        brand: pinwheel mark, header banner
 ```
 
