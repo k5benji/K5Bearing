@@ -1,8 +1,15 @@
+# Local / secrets
 .env
-__pycache__/
-*.pyc
+.DS_Store
+
+# Leftover Python virtualenv / caches (from the former bot)
 .venv/
 venv/
+__pycache__/
+*.pyc
 .pytest_cache/
 
-.DS_Store
+# Web tooling (when we add a build step)
+node_modules/
+dist/
+.cache/

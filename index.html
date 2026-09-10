@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>K5 Bearing — Rotterdam weather channel</title>
+  <meta name="description" content="A weather channel for Rotterdam, viewable in the browser. From Kastle Five Systems. Coming soon.">
+  <style>
+    @font-face {
+      font-family: "Eurostile Extended";
+      src: url("assets/fonts/EurostileExtendedBlack.ttf") format("truetype");
+      font-weight: 900;
+      font-display: swap;
+    }
+    :root {
+      --ink: #F4F9FF;      /* arctic white */
+      --ground: #000000;   /* black */
+      --muted: #8b93a0;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      background: var(--ground);
+      color: var(--ink);
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8vh 6vw;
+      -webkit-font-smoothing: antialiased;
+    }
+    .mark {
+      width: 116px; height: 116px;
+      margin: 0 auto 30px;
+      animation: spin 34s linear infinite;
+    }
+    @media (prefers-reduced-motion: reduce) { .mark { animation: none; } }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .wordmark {
+      font-family: "Eurostile Extended", "Helvetica Neue", Arial, sans-serif;
+      font-weight: 900;
+      letter-spacing: 0.14em;
+      font-size: clamp(1.9rem, 6vw, 3.4rem);
+      margin: 0;
+      line-height: 1;
+    }
+    .tagline {
+      margin: 18px 0 0;
+      color: var(--ink);
+      font-size: clamp(0.85rem, 2.4vw, 1.05rem);
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+    }
+    .status {
+      margin-top: 42px;
+      color: var(--muted);
+      font-size: 0.78rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+    .status::before, .status::after {
+      content: "";
+      display: inline-block;
+      width: 26px; height: 1px;
+      background: var(--muted);
+      vertical-align: middle;
+      margin: 0 14px;
+    }
+    .footer {
+      position: fixed;
+      bottom: 22px; left: 0; right: 0;
+      color: var(--muted);
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <svg class="mark" viewBox="0 0 600 600" role="img" aria-label="K5 Bearing pinwheel mark">
+      <g fill="var(--ink)">
+        <polygon points="300,300 300,268 409.6,190.4"/>
+        <polygon points="300,300 332,300 409.6,409.6"/>
+        <polygon points="300,300 300,332 190.4,409.6"/>
+        <polygon points="300,300 268,300 190.4,190.4"/>
+        <polygon points="300,300 270.3,270.3 300,65"/>
+        <polygon points="300,300 329.7,270.3 535,300"/>
+        <polygon points="300,300 329.7,329.7 300,535"/>
+        <polygon points="300,300 270.3,329.7 65,300"/>
+      </g>
+    </svg>
+    <h1 class="wordmark">K5&nbsp;BEARING</h1>
+    <p class="tagline">Rotterdam weather channel</p>
+    <p class="status">Coming soon</p>
+  </main>
+  <div class="footer">Kastle Five Systems · Keep your bearing</div>
+</body>
+</html>
