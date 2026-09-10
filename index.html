@@ -3,73 +3,94 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>K5 Bearing — Rotterdam weather channel</title>
-  <meta name="description" content="A weather channel for Rotterdam: current conditions, forecast, alerts, tides, sun almanac, and space weather. From Kastle Five Systems.">
+  <title>K5 Bearing</title>
+  <meta name="description" content="K5 Bearing — notes on the body: how we move it, build it, and bow it. Body, movement, the iron, and Karaite prayer.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="topbar">
-    <div class="brand">
+  <div class="page">
+    <header class="masthead">
       <svg class="mark" viewBox="0 0 600 600" role="img" aria-label="K5 Bearing">
-        <g fill="var(--ink)">
+        <g fill="currentColor">
           <polygon points="300,300 300,268 409.6,190.4"/><polygon points="300,300 332,300 409.6,409.6"/>
           <polygon points="300,300 300,332 190.4,409.6"/><polygon points="300,300 268,300 190.4,190.4"/>
           <polygon points="300,300 270.3,270.3 300,65"/><polygon points="300,300 329.7,270.3 535,300"/>
           <polygon points="300,300 329.7,329.7 300,535"/><polygon points="300,300 270.3,329.7 65,300"/>
         </g>
       </svg>
-      <span class="wordmark">K5&nbsp;Bearing</span>
-    </div>
-    <div class="place">
-      <span class="city">Rotterdam</span>
-      <span class="clock" id="clock">—</span>
-    </div>
-  </header>
+      <h1 class="wordmark">K5 Bearing</h1>
+      <p class="kicker">Body &middot; Movement &middot; Iron &middot; Prayer</p>
+    </header>
 
-  <main class="grid">
-    <section class="tile now" id="now" aria-label="Current conditions">
-      <div class="tile-title">Now</div>
-      <div class="tile-body" data-state="loading">Loading…</div>
-    </section>
+    <main>
+      <p class="lede">
+        The body is the instrument — of work and of worship. These are notes on keeping it:
+        how we move it, build it, and bow it. Effort and reverence run through the same flesh.
+        The whole aim is simple. Keep your bearing.
+      </p>
 
-    <section class="tile forecast" id="forecast" aria-label="Forecast">
-      <div class="tile-title">Next days</div>
-      <div class="tile-body" data-state="loading">Loading…</div>
-    </section>
+      <section>
+        <h2><span class="num">I</span> The Body</h2>
+        <p>
+          The body is the first thing given to us and the last thing we set down. Everything
+          begins here. To know yourself, begin with the body — its hunger, its limits, its
+          strange willingness to be built. It is not an obstacle to the spirit but the
+          instrument of it.
+        </p>
+        <p>
+          Care for it plainly. Feed it, rest it, use it. A body attended to becomes quiet
+          enough to think in; a body neglected grows loud and makes every other thing harder.
+        </p>
+      </section>
 
-    <section class="tile alerts" id="alerts" aria-label="Severe-weather warnings">
-      <div class="tile-title">Warnings</div>
-      <div class="tile-body" data-state="pending">
-        <div class="pending">Live Dutch warnings — <span>connecting soon</span></div>
-      </div>
-    </section>
+      <section>
+        <h2><span class="num">II</span> Movement</h2>
+        <p>
+          We were made to move. Kept still, the body dims; set in motion, it clears the head.
+          Walk, carry, climb, work with the hands. None of it has to be grand. Movement is the
+          daily proof that you are awake and in the world.
+        </p>
+        <p>
+          Let some of it be honest and unmeasured — a long walk, a hard day's labour — the kind
+          of motion that asks nothing of a screen.
+        </p>
+      </section>
 
-    <section class="tile tides" id="tides" aria-label="Tides">
-      <div class="tile-title">Tides · Hoek van Holland</div>
-      <div class="tile-body" data-state="pending">
-        <div class="pending">Tide predictions — <span>connecting soon</span></div>
-      </div>
-    </section>
+      <section>
+        <h2><span class="num">III</span> The Iron</h2>
+        <p>
+          The gym is a school of the will. Under the bar there is no arguing with the weight —
+          you move it or you do not. Strength is earned in small, repeated acts, and it teaches
+          what little else can: that you become what you practise.
+        </p>
+        <p>
+          Show up. Add a little. Return tomorrow. The iron keeps an honest ledger and pays out
+          slowly, which is exactly why it is worth trusting.
+        </p>
+      </section>
 
-    <section class="tile almanac" id="almanac" aria-label="Sun almanac">
-      <div class="tile-title">Almanac</div>
-      <div class="tile-body" data-state="loading">Loading…</div>
-    </section>
+      <section>
+        <h2><span class="num">IV</span> Prayer</h2>
+        <p>
+          Karaite prayer returns to the source — the Tanakh, the written word, read and spoken
+          plainly before God. It is worship kept close to Scripture: the Psalms on the lips, the
+          knees bent, the face lowered to the ground.
+        </p>
+        <p>
+          Here the body and the spirit meet. The same flesh that strains under the bar bows in
+          prostration; the same breath that counts a lift carries a psalm. To pray this way is to
+          bring the whole body into reverence — nothing held back, nothing left standing.
+        </p>
+      </section>
+    </main>
 
-    <section class="tile space" id="space" aria-label="Space weather">
-      <div class="tile-title">Space weather · compass</div>
-      <div class="tile-body" data-state="loading">Loading…</div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <span>Kastle Five Systems · Keep your bearing</span>
-    <span class="sources">Open-Meteo · NOAA SWPC</span>
-  </footer>
-
-  <script src="app.js"></script>
+    <footer class="colophon">
+      <span>Keep your bearing.</span>
+      <span class="org">Kastle Five Systems</span>
+    </footer>
+  </div>
 </body>
 </html>
