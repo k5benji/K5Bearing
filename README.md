@@ -7,7 +7,7 @@
   <a href="LICENSE">Open source · MIT</a>
 </p>
 
-**K5 Bearing** is a plain, text-based site on three pillars: the **body**, **motion**, and
+**K5 Bearing** is a plain, text-based site on three pillars: the **body**, **physical training**, and
 **Karaite prayer**. Effort and reverence run through the same flesh. The whole aim is
 simple — keep your bearing.
 
