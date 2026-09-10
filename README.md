@@ -1,8 +1,6 @@
 <p align="center">
-  <img src="assets/k5bearing-logo.png" alt="K5 Bearing" width="132">
+  <img src="assets/k5bearing-header.png" alt="K5 Bearing" width="720">
 </p>
-
-<h1 align="center">K5 Bearing</h1>
 
 <p align="center">
   A <strong>weather channel for Rotterdam</strong>, viewable in the browser — from <strong>Kastle Five Systems</strong>.<br>
@@ -14,49 +12,52 @@ conditions, the day's forecast, severe-weather alerts, tides, the sun almanac, a
 space-weather compass advisory that gives the project its name. Built on free, keyless
 feeds. No accounts, no ads — just the signal.
 
-> **Status: early.** This repo is being reworked. K5 Bearing began life as an automated
-> X (Twitter) posting bot; it's now becoming a browser-based weather channel. That pivot
-> is in progress — the repo currently holds the direction, the brand, and a placeholder
-> page. The former bot's code lives in the git history if any of it is worth reusing.
+> **Status: early build.** The format is a **live dashboard** — one page you can leave
+> open on a phone, laptop, or a screen on the wall. Four tiles are live now (current
+> conditions, forecast, almanac, space weather); alerts and tides are laid out and wired
+> next (see [Data](#data)). K5 Bearing began as an automated X bot — that code is in the
+> git history.
 
-## The idea
+## Run it
 
-A single page you can leave open — on a phone, a laptop, a screen on the wall — that
-shows Rotterdam's weather as a living channel. The **exact format is still open**: it
-could run as a **rolling, TV-style channel** (full-screen panels that auto-advance —
-conditions → forecast → alerts → tides → almanac, looping), or as a **live dashboard**
-(everything at a glance on one page). That decision comes next.
+It's a static site — no build step, no backend. Open `index.html`, or serve the folder:
 
-## What it will show (Rotterdam)
+```
+python3 -m http.server 8000     # then open http://localhost:8000
+```
 
-- **Now** — current temperature, sky, wind.
-- **Forecast** — the day and the night ahead.
-- **Severe weather** — official warnings when they're in force.
-- **Tides** — the next high/low water at the coast.
-- **Almanac** — sunrise/sunset compass bearings, solar noon, daylight length. The
-  navigation angle behind the name: *keep your bearing*.
-- **Space weather** — geomagnetic storms and the compass-accuracy advisory (magnetic
-  north drifts during solar storms — the original "Bearing").
+## The dashboard (Rotterdam)
+
+- **Now** — temperature, sky, wind (as a compass bearing), feels-like, humidity. *(live)*
+- **Next days** — a short forecast, highs and lows. *(live)*
+- **Almanac** — sunrise/sunset compass bearings, solar noon, daylight length and trend.
+  The navigation angle behind the name: *keep your bearing.* *(live)*
+- **Space weather** — the Kp index and the compass-accuracy advisory (magnetic north
+  drifts during solar storms — the original "Bearing"). *(live)*
+- **Warnings** — official Dutch severe-weather warnings. *(wiring next)*
+- **Tides** — next high water at the coast (Hoek van Holland). *(wiring next)*
 
 ## Data
 
-All sourced from free, public, keyless feeds — the plan is to keep it that way:
+All from free, public, keyless feeds:
 
-- **Open-Meteo** — current conditions and forecast
-- **KNMI / MeteoAlarm** — official Dutch severe-weather warnings
-- **Rijkswaterstaat** — tide predictions
-- **NOAA SWPC** — space weather and the geomagnetic (compass) signal
+- **Open-Meteo** — conditions, forecast, sun times *(browser-direct)*
+- **NOAA SWPC** — space weather / the geomagnetic compass signal *(browser-direct)*
+- **KNMI / MeteoAlarm** — Dutch warnings *(no CORS → needs a small cached data feed)*
+- **Rijkswaterstaat** — tide predictions *(no CORS → needs a small cached data feed)*
+
+Open-Meteo and NOAA allow direct browser requests. MeteoAlarm and Rijkswaterstaat don't
+send CORS headers, so the plan is a tiny scheduled job that caches their data into a
+static JSON file the page reads — same free, keyless approach, no backend to run.
 
 ## Repository
 
 ```
-index.html          placeholder holding page (the browser entry point)
-assets/             brand: pinwheel logo, header, Eurostile display font
-README.md           this file
+index.html     the dashboard
+styles.css     brand styling
+app.js         data fetching + rendering (vanilla JS, no dependencies)
+assets/        brand: pinwheel logo, header, Eurostile display font
 ```
-
-Nothing here is functional yet — `index.html` is a branded placeholder. The build comes
-once the channel format is chosen.
 
 ## Brand
 
