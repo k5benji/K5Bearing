@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/k5bearing-header.png" alt="K5 Bearing" width="720">
+  <img src="assets/k5bearing-header.jpg" alt="K5 Bearing" width="720">
 </p>
 
 <p align="center">
