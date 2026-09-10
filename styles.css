@@ -32,9 +32,9 @@ body {
 .mark { width: 30px; height: 30px; color: var(--accent); opacity: 0.95; }
 .wordmark {
   margin: 0.5rem 0 0;
-  font-weight: 500;
-  font-size: clamp(2rem, 7vw, 2.8rem);
-  letter-spacing: 0.02em;
+  font-weight: 700;
+  font-size: clamp(2.1rem, 7.5vw, 3rem);
+  letter-spacing: 0.09em;
   line-height: 1.1;
 }
 .kicker {
@@ -58,13 +58,13 @@ body {
 
 section { margin: clamp(2.4rem, 7vw, 3.6rem) 0; }
 h2 {
-  font-weight: 500;
-  font-size: 1.5rem;
-  letter-spacing: 0.02em;
+  font-weight: 700;
+  font-size: 1.62rem;
+  letter-spacing: 0.07em;
   margin: 0 0 0.9rem;
   display: flex;
   align-items: baseline;
-  gap: 0.75rem;
+  gap: 0.8rem;
 }
 h2 .num {
   color: var(--accent);
