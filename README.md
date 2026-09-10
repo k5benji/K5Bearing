@@ -1,6 +1,13 @@
-# K5 Bearing
+<p align="center">
+  <img src="assets/k5bearing-logo.png" alt="K5 Bearing" width="132">
+</p>
 
-A **weather channel for Rotterdam**, viewable in the browser — from **Kastle Five Systems**.
+<h1 align="center">K5 Bearing</h1>
+
+<p align="center">
+  A <strong>weather channel for Rotterdam</strong>, viewable in the browser — from <strong>Kastle Five Systems</strong>.<br>
+  <a href="LICENSE">Open source · MIT</a>
+</p>
 
 K5 Bearing turns hard, public weather data into a clean, always-on channel: current
 conditions, the day's forecast, severe-weather alerts, tides, the sun almanac, and the
@@ -55,3 +62,7 @@ once the channel format is chosen.
 
 Black ground, arctic-white (`#F4F9FF`) marks, the eight-blade compass-rose pinwheel, and
 Eurostile Extended for display type. Minimal and modern. **Keep your bearing.**
+
+## License
+
+Open source under the [MIT License](LICENSE) — free to use, modify, and share.
